@@ -1,0 +1,50 @@
+body {
+	background: black;
+}
+
+.calculator {
+	margin: 200px auto;
+	padding: 0 600px;
+	width: 800px;
+}
+
+.wrapper {
+	background: gray;
+	width: 27.5%;
+	text-align: right;
+	font-size: 40px;
+	margin-right: 20px;
+}
+
+h4 {
+	margin: 0;
+	width: 27.5%;
+}
+
+#screen {
+	padding: 0 40px;
+}
+
+.keys {
+	background: gray;
+	float: left;
+	width: 27.5%;
+}
+
+.keys span {
+	border: 1px solid black;
+	width: 20%;
+	float: left;
+	font-size: 40px;
+	padding: 0;
+}
+
+.keys span:hover {
+	background: red;
+}
+
+button {
+	float: left;
+	display: inline;
+	text-align: center;
+}
