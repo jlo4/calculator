@@ -1,5 +1,5 @@
 body {
-	background: black;
+	background: lightblue;
 }
 
 .calculator {
@@ -43,8 +43,7 @@ h4 {
 	background: red;
 }
 
-button {
+span button {
+	width: 100%;
 	float: left;
-	display: inline;
-	text-align: center;
 }
