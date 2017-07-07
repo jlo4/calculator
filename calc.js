@@ -119,25 +119,29 @@ $(document).ready(function(){
 		switch(toDo[0]) {
 			case '+':
 						result = add(Number(newSaved), Number(saved));
-						console.log(result);
+						console.log("RESULT= " + result);
+						newSaved = result.toString().split("");
+						console.log("NewSaved = " + newSaved);
 						$("#screen").text(result);
 			break;
 			case 'x':
 						result = multiply(Number(newSaved), Number(saved));
 						console.log(result);
+						newSaved = result.toString().split("");
+						console.log("NewSaved = " + typeof newSaved);
 						$("#screen").text(result);
 			break;
 			case '/':
 						result = divide(Number(newSaved), Number(saved));
 						console.log(result);
+						newSaved = result.toString().split("");
 						$("#screen").text(result);
 			break;
 			case '-':
 						result = subtract(Number(newSaved), Number(saved));
 						console.log(result);
-						newSaved = result;
-						console.log(total);
-						console.log("NewSaved = " + newSaved);
+						newSaved = result.toString().split("");
+						console.log("NewSaved = " + typeof newSaved);
 
 						$("#screen").text(result);
 			break;
@@ -148,6 +152,9 @@ $(document).ready(function(){
 		// 	console.log("WHAT =" + result[k]);
 		// }
 
+			console.log(newSaved);
+			saved = [];
+			console.log(saved);
 		// console.log("RESULT " + result);
 		toDo[0] = '';
 	});
