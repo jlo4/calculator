@@ -3,7 +3,7 @@ const ScreenValue = "0";
 // var MathValue = ;
 const MaxDigits = 4;
 
-var total;
+var result;
 var toDo = [];
 var saved = [];
 var full = [];
@@ -37,49 +37,24 @@ var result;
 
 // }
 $(document).ready(function(){
-
+	var num;
 	$(".number").on("click", function handler(){
 		if(saved.length < 5){
-		var num = $(this).text();
+		num = $(this).text();
 //Change num to Number() after adding strings together
 		saved.push(num);
 		console.log(saved.length);
-		total = 0;
+		result = "";
 		for(var i = 0; i < saved.length; i++){
-			total += saved[i];
+			result += saved[i];
 		}
-		console.log("Total= " + total);
-		$("#screen").text(total);
+		console.log("Result= " + result);
+		$("#screen").text(result);
 		// while (saved.length < 5) {
 		// saved.push(num);
 	}
 });
-  // var handler =  function(){
 
-
-
-		// switch(savedDigit) {
-		// 	case 1: toDoconsole.log(toDosavedDigit);
-		// 	break;
-		// 	case 2: console.log(savedDigit);
-		// 	break;
-		// 	case 3: console.log(savedDigit);
-		// 	break;
-		// 	case 4: console.log(savedDigit);
-		// 	break;
-		// 	case 5: console.log(savedDigit);
-		// 	break;
-		// 	case 6: console.log(savedDigit);
-		// 	break;
-		// 	case 7: console.log(savedDigit);
-		// 	break;
-		// 	case 8: console.log(savedDigit);
-		// 	break;
-		// 	case 9: console.log(savedDigit);
-		// 	break;
-		// 	default: console.log("get savedDigit");
-		// 	break;
-		// }
 	$("#divide").on("click", function(){
 		toDo[0] = '/';
 		$("#screen").text(toDo[0]);
@@ -120,27 +95,27 @@ $(document).ready(function(){
 			case '+':
 						result = add(Number(newSaved), Number(saved));
 						console.log("RESULT= " + result);
-						newSaved = result.toString().split("");
+						saved = result.toString().split("");
 						console.log("NewSaved = " + newSaved);
 						$("#screen").text(result);
 			break;
 			case 'x':
 						result = multiply(Number(newSaved), Number(saved));
 						console.log(result);
-						newSaved = result.toString().split("");
+						saved = result.toString().split("");
 						console.log("NewSaved = " + typeof newSaved);
 						$("#screen").text(result);
 			break;
 			case '/':
 						result = divide(Number(newSaved), Number(saved));
 						console.log(result);
-						newSaved = result.toString().split("");
+						saved = result.toString().split("");
 						$("#screen").text(result);
 			break;
 			case '-':
 						result = subtract(Number(newSaved), Number(saved));
 						console.log(result);
-						newSaved = result.toString().split("");
+						saved = result.toString().split("");
 						console.log("NewSaved = " + typeof newSaved);
 
 						$("#screen").text(result);
@@ -151,9 +126,8 @@ $(document).ready(function(){
 		// for(var k = 0; k < result.length; k++){
 		// 	console.log("WHAT =" + result[k]);
 		// }
-
-			console.log(newSaved);
-			saved = [];
+			console.log(saved);
+			newSaved = [];
 			console.log(saved);
 		// console.log("RESULT " + result);
 		toDo[0] = '';
@@ -166,12 +140,11 @@ $(document).ready(function(){
 		return concat;
 	}
 	$("#clear").on("click", function(){
-		total = 0;
 		saved = [];
 		newSaved = [];
 		result = 0;
 		$("#screen").text(result);
-		console.log(total, saved.length, newSaved, result);
+		console.log(saved.length, newSaved, result);
 	});
 
 	});
