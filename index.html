@@ -3,15 +3,38 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Calculator</title>
-	<script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="calc.css">
 </head>
 <body>
+
+	<div id="nav" class="navbar navbar-default navbar-fixed-top">
+		<nav>
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">J L</a>
+				</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a href="https://github.com/jlo4" target="_blank">My Github<span class="sr-only">(current)</span></a></li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+	</div>
+<div class="container">
 	<div class="calculator">
-		<h4>Calculator</h4>
+		<h1>Calculator</h4>
 		<div class="wrapper">
 			<span id="screen">0<span>
 		</div>
@@ -20,22 +43,28 @@
 				<span>AC</span>
 				<span>%</span>
 				<span id="divide">/</span>
-				<span id="7" class="number">7</span>
-				<span id="8" class="number">8</span>
-				<span id="9" class="number">9</span>
+				<span id="seven" class="number">7</span>
+				<span id="eight" class="number">8</span>
+				<span id="nine" class="number">9</span>
 				<span id="multiply">x</span>
-				<span id="4" class="number">4</span>
-				<span id="5" class="number">5</span>
-				<span id="6" class="number">6</span>
+				<span id="four" class="number">4</span>
+				<span id="five" class="number">5</span>
+				<span id="six" class="number">6</span>
 				<span id="subtract">-</span>
-				<span id="1" class="number">1</span>
-				<span id="2" class="number">2</span>
-				<span id="3" class="number">3</span>
+				<span id="one" class="number">1</span>
+				<span id="two" class="number">2</span>
+				<span id="three" class="number">3</span>
 				<span id="add">+</span>
-				<span id="0" class="number">0</span>
+				<span id="zero" class="number">0</span>
+				<span id="decimal" class="number">.</span>
 				<span id="equals">=</span>
 			</div>
 	</div>
+</div>
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
 	<script src="calc.js"></script>
 </body>
 </html>

@@ -24,7 +24,6 @@ var subtract = function subtract(num1, num2) {
 	return num1 - num2;
 }
 
-var result;
 // switch(mathValue) {
 //
 // 	case '+':
@@ -48,10 +47,13 @@ $(document).ready(function(){
 		for(var i = 0; i < saved.length; i++){
 			result += saved[i];
 		}
+		console.log(typeof result);
 		console.log("Result= " + result);
 		$("#screen").text(result);
 		// while (saved.length < 5) {
 		// saved.push(num);
+	} else {
+		$("#screen").text(result);
 	}
 });
 
@@ -95,30 +97,64 @@ $(document).ready(function(){
 			case '+':
 						result = add(Number(newSaved), Number(saved));
 						console.log("RESULT= " + result);
+						if (result % 1 != 0) {
+							result = result.toFixed(3);
+							saved = result.toString().split("");
+							console.log(typeof saved);
+							console.log("NewSaved = " + newSaved);
+							$("#screen").text(result);
+						} else {
 						saved = result.toString().split("");
+						console.log(typeof saved);
 						console.log("NewSaved = " + newSaved);
 						$("#screen").text(result);
+					}
 			break;
 			case 'x':
 						result = multiply(Number(newSaved), Number(saved));
 						console.log(result);
+						if (result % 1 != 0) {
+							result = result.toFixed(3);
+							saved = result.toString().split("");
+							console.log(typeof saved);
+							console.log("NewSaved = " + newSaved);
+							$("#screen").text(result);
+						} else {
 						saved = result.toString().split("");
-						console.log("NewSaved = " + typeof newSaved);
+						console.log(typeof saved);
+						console.log("NewSaved = " + newSaved);
 						$("#screen").text(result);
+					}
 			break;
 			case '/':
 						result = divide(Number(newSaved), Number(saved));
-						console.log(result);
+						if (result % 1 != 0) {
+							result = result.toFixed(3);
+							saved = result.toString().split("");
+							console.log(typeof saved);
+							console.log("NewSaved = " + newSaved);
+							$("#screen").text(result);
+						} else {
 						saved = result.toString().split("");
+						console.log(typeof saved);
+						console.log("NewSaved = " + newSaved);
 						$("#screen").text(result);
+					}
 			break;
 			case '-':
 						result = subtract(Number(newSaved), Number(saved));
-						console.log(result);
+						if (result % 1 != 0) {
+							result = result.toFixed(3);
+							saved = result.toString().split("");
+							console.log(typeof saved);
+							console.log("NewSaved = " + newSaved);
+							$("#screen").text(result);
+						} else {
 						saved = result.toString().split("");
-						console.log("NewSaved = " + typeof newSaved);
-
+						console.log(typeof saved);
+						console.log("NewSaved = " + newSaved);
 						$("#screen").text(result);
+					}
 			break;
 			default: console.log("Something is wrong");
 		}
@@ -146,8 +182,9 @@ $(document).ready(function(){
 		$("#screen").text(result);
 		console.log(saved.length, newSaved, result);
 	});
-
-	});
+	var width = $(window).width();
+	console.log(width);
+});
 	// math = Number(num) + Number(num)
 	// 	$("#screen").text(math);
 // });
