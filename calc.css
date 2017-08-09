@@ -42,13 +42,23 @@ and (device-aspect-ratio: 40/71) {
 	}
 }
 
-
-
 body {
 	background: lightblue;
 	font-size: 36px;
 	padding: 0;
 	height: 100%;
+}
+
+#nav {
+  height: 5%;
+}
+
+.nav {
+  font-size: 3em;
+}
+
+.navbar-brand {
+  font-size: 3em;
 }
 
 .container {
