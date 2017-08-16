@@ -49,17 +49,14 @@ body {
 	height: 100%;
 }
 
-#nav {
-  height: 5%;
-}
-
 .nav {
-  font-size: 2em;
+  font-size: .5em;
 }
 
 .navbar-brand {
-  font-size: 2em;
+  font-size: .5em;
 }
+
 
 .container {
 	height: 80%;
