@@ -159,7 +159,12 @@ nav > ul > li {
 	 padding: 2% 15% 0 0;
 }
 
-nav > ul > li > a {
+a {
+	color: white;
+	text-decoration: none;
+}
+
+a:hover {
 	color: white;
 	text-decoration: none;
 }
@@ -173,6 +178,7 @@ nav > ul > li > a {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
+	width: 30%;
 }
 
 @media screen and (max-width: 920px) {
